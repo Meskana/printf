@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	match m[] = {
-		{"%c",printf_char},{"%s",printf_string},{"%%",print_37},{"%d",print_dec},{"%i",print_int},{"%b",print_bin},{"%r",print_revs}
+		{"%c", printf_char}, {"%s", printf_string}, {"%%", print_37}, {"%d", print_dec}, {"%i", print_int}, {"%b", print_bin}, {"%r", print_revs}
 	}
 	va_list args;
 	int i = 0, len = 0;
@@ -23,9 +23,10 @@ Here:
 		{
 			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				len = len +m[j].f(args);
-				i = i + 2
-					goto Here:
+				len = len + m[j].f(args);
+				i = i + 2;
+
+					goto Here :
 			}
 			j--;
 		}
@@ -34,5 +35,5 @@ Here:
 		len++;
 	}
 	va_end(args);
-	return(len);
+	return (len);
 }

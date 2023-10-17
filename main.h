@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
-#include <sring.h>
+#include <string.h>
 #include <unistd.h>
 #define BUFF_SIZE 1024
 
@@ -13,7 +13,7 @@ typedef struct format
 }match;
 int printf_char(va_list val);
 int _putchar(char c);
-int printf_bin(va_list spec)
+int printf_bin(va_list val);
 int _printf(const char *format, ...);
 int printf_string(va_list val);
 int _strlen(char *str);
