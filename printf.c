@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _printf -minics printf
+ * _printf - minics printf
  * @format: identifier looking for
  * Return: integer
  */
+
 int _printf(const char *format, ...)
 {
 	match m[] = {
@@ -11,6 +12,7 @@ int _printf(const char *format, ...)
 	}
 	va_list args;
 	int i = 0, len = 0;
+	int j;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' & format[1] == '\0'))
@@ -25,8 +27,7 @@ Here:
 			{
 				len = len + m[j].f(args);
 				i = i + 2;
-
-					goto Here :
+				goto Here :
 			}
 			j--;
 		}
