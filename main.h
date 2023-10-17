@@ -2,17 +2,10 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
-<<<<<<< HEAD
-#include <stdlib.h>
-#include <stdarg.h>
-#include <unistd.h>
-#include <limits.h>
-=======
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
->>>>>>> 19aa5cf36ab2c7e0a4b38d2b3b5ac70cde446d8e
 
 /* FLAGS */
 #define F_MINUS 1
@@ -46,14 +39,6 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
-<<<<<<< HEAD
-}match;
-
-int printf_char(va_list val);
-int _putchar(char c);
-int printf_bin(va_list val);
-=======
->>>>>>> 19aa5cf36ab2c7e0a4b38d2b3b5ac70cde446d8e
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
@@ -130,4 +115,3 @@ long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif /* MAIN_H */
-
