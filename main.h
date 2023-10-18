@@ -37,6 +37,16 @@ struct fmt
  * @fmt: The format.
  * @fm_t: The function associated.
  */
+/* *
+ * there is were i add some prot
+ */
+int printf_str(char *);
+int _putchar(char c);
+int printf_digit_d(int);
+int printf_digit_i(int);
+
+
+
 typedef struct fmt fmt_t;
 
 int _putchar(char c);
