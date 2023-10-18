@@ -23,27 +23,23 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count++;
 		}
-		switch (format[i + 1])
+		else if (format[i + 1] == 'c')
 		{
-			case 'c':
-
 			_putchar(va_arg(list, int));
 			i++;
 			count++;
-			break;
-
-			case 's':
-
+		}
+		else if (format[i + 1] == 's')
+		{
 			s = printf_str(va_arg(list, char *));
 			i++;
 			count += (s - 1);
-			break;
-			case '%':
-
+		}
+		else if (format[i + 1] == '%')
+		{
 			_putchar('%');
 			i++;
 			count++;
-			break;
 		}
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 		{
