@@ -24,33 +24,12 @@
  * @fmt: The format.
  * @fn: The function associated.
  */
-struct fmt
-{
-	char fmt;
-	int (*fn)(va_list, char[], int, int, int, int);
-};
-
-
-/**
- * typedef struct fmt fmt_t - Struct op
- *
- * @fmt: The format.
- * @fm_t: The function associated.
- */
-/* *
- * there is were i add some prot
- */
 int printf_str(char *);
 int _putchar(char c);
 int printf_digit_d(int);
 int printf_digit_i(int);
-
-
-
-typedef struct fmt fmt_t;
-
-int _putchar(char c);
 int _printf(const char *format, ...);
+
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
