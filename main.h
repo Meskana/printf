@@ -7,7 +7,6 @@
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
-
 /**
  * struct fmt - Struct op
  *
